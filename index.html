@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reprogramafy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!--BARRA DE NAVEGAÇÃO-->
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo-branco.png" alt="logo reprogramafy">
+      </div>
+      <button id="botao">Login</button>
+    </nav>
+  </header>
+
+
+  <!--MAIN (serve para enfatizar o conteúdo na busca/Google)-->
+
+  <main>
+    <h1>Sua música. Sua programação.</h1>
+    <h2>Qualquer semelhança com outras plataformas é mera coincidência.</h2>
+  </main>
+
+
+  <!--MODAL-->
+
+  <div id="fundo">
+    <!--deixar a div escurecida quando abre a modal-->
+    <div id="modal">
+      <button type="button" id="fechar">x</button>
+      <img src="img/logo-vertical.png" alt="Logo Vertical" class="img">
+      <form action="novidades.html">
+        <!--action = manda a informação digitada para uma página específica-->
+        <div>
+          <input type="email" required placeholder="E-mail" id="email" class="box-email"></div>
+        <!--required = torna obrigatório o input de algum dado-->
+        <div><input type="password" required placeholder="Senha" id="senha" class="box-senha"></div>
+        <div><button type="submit" class="logar">Logar</button></div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js "></script>
+</body>
+
+</html>
