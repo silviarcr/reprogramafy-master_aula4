@@ -84,7 +84,8 @@ var playlist=[
 console.log(playlist);
 
 
-// Adicionando novos ojetos na lista já existente. Esses elementos foram criados 
+// Adicionando novos ojetos na lista já existente. A lista está vazia.
+// Os elementos e seus conteudos, atributos, classes, estão sendo criados e incluidos agora
 var playlistUl = document.querySelector('#playlist ul');
 for (var i=0; i< playlist.length; i++){
   console.log(playlist[i].name);
@@ -116,14 +117,15 @@ for (var i=0; i< playlist.length; i++){
 function mudarMusica(){
   // console.log(this);
   //console.log(this.getAttribute('data-id'));
+  // seleciona um item pra tocar, que vai estar "active"
   var lis = document.querySelectorAll('#playlist li');
   for(var i=0; i< lis.length; i++){
     lis[i].classList.remove('active');
   }
-    this.classList.add('active');
+  this.classList.add('active');
   
   var id = this.getAttribute('data-id');
-  var audio = document.querySelector('audio');
+  var audio = document.querySelector('audio');  
   var img = document.querySelector('.capa >img');   //mudar imagem da capa
   var h1 = document.querySelector('.musica >h1');  //mudar nome da musica
   img.src = playlist[id].album.cover;
@@ -133,8 +135,9 @@ function mudarMusica(){
   console.log(playlist[id]);
 }
 
+//pesquisar musica por nome
 var pesquisaInput = document.querySelector('#pesquisa');
-pesquisaInput.onkeydown= function(){
+pesquisaInput.onkeyup= function(){  //pesquisar apenas se solta a tecla
   console.log(this.value);
   var lis = document.querySelectorAll('#playlist li');
     for(var i = 0; i < lis.length; i++){

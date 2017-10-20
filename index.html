@@ -16,7 +16,10 @@
       <div class="logo">
         <img src="logo-branco.png" alt="logo reprogramafy">
       </div>
-      <button id="botao">Login</button>
+      <div>
+        <button id="botao-cadastro">Cadastre-se</button>
+        <button id="botao">Login</button>
+      </div>
     </nav>
   </header>
 
@@ -29,7 +32,7 @@
   </main>
 
 
-  <!--MODAL-->
+  <!--MODAL Login-->
 
   <div id="fundo">
     <!--deixar a div escurecida quando abre a modal-->
@@ -46,7 +49,26 @@
       </form>
     </div>
   </div>
+
+  <!--MODAL Cadastro-->
+  <div id="fundo-cadastro">
+    <!--deixar a div escurecida quando abre a modal-->
+    <div id="modal-cadastro">
+      <button type="button" id="botao-fechar-cadastro">x</button>
+      <img src="img/logo-vertical.png" alt="Logo Vertical" class="img">
+      <form action="">
+        <!--action = manda a informação digitada para uma página específica-->
+        <div>
+          <input type="email" required placeholder="E-mail" id="email-cadastro" class="box-email"></div>
+        <!--required = torna obrigatório o input de algum dado-->
+        <div><input type="password" required placeholder="Senha" id="senha-cadastro" class="box-senha"></div>
+        <div><button type="submit" class="logar">Cadastrar</button></div>
+      </form>
+    </div>
+  </div>
+
   <script src="script.js "></script>
+  <script src="cadastro.js "></script>
 </body>
 
 </html>
